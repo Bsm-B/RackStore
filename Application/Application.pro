@@ -22,16 +22,19 @@ TARGET = Application
 PRE_TARGETDEPS += $$top_builddir/components/$(OBJECTS_DIR)/libcomponents.a
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp
+    main.cpp \
+    login.cpp
 
 HEADERS += \
-        mainwindow.h
+    login.h
 
 FORMS += \
-        mainwindow.ui
+    login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    src.qrc
