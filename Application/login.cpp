@@ -34,6 +34,8 @@ Login::Login(QWidget *parent) :
     //add
 
     ui->label->setText("<img src=':/images/images/login.png'>");
+    ui->label_3->setText("<img src=':/images/icon/ic_help_outline_24px.svg'>");
+    ui->label_2->setStyleSheet("QLabel { color : #9e9ebe }");
     ui->verticalLayout->addWidget(close);
     ui->verticalLayout_2->addWidget(userid_textbox);
     ui->verticalLayout_3->addWidget(userpassword_textbox);
@@ -80,13 +82,12 @@ void Login::password(){
         toogl = false;
         qDebug() << "on";
 
-
     }else{
+
         view->setIcon(QtMaterialTheme::icon("action", "visibility_off"));
         userpassword_textbox->setEchoMode(QLineEdit::Normal);
         toogl = true;
         qDebug() << "off";
-
 
     }
 
