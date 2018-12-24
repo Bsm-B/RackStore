@@ -6,6 +6,7 @@
 #include <lib/qtmaterialtheme.h>
 #include <QColorDialog>
 #include <QDebug>
+#include <QPainter>
 #include <qtmaterialtextfield.h>
 #include <qtmaterialraisedbutton.h>
 
@@ -20,6 +21,7 @@ class Login : public QMainWindow
 private slots:
 
      void exit();
+     void password();
 
 public:
     explicit Login(QWidget *parent = nullptr);
@@ -27,6 +29,9 @@ public:
 
 private:
     Ui::Login *ui;
+    QtMaterialIconButton * view;
+    QtMaterialTextField * userpassword_textbox;
+    bool toogl;
 };
 
 #endif //
