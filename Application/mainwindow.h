@@ -1,0 +1,32 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <lib/qtmaterialtheme.h>
+#include <qtmaterialappbar.h>
+#include <qtmaterialiconbutton.h>
+#include <QThread>
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+private slots:
+
+    void showdraw();
+
+public:
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private:
+    Ui::MainWindow *ui;
+    QtMaterialAppBar * topbar;
+    QtMaterialIconButton *button;
+};
+
+#endif // MAINWINDOW_H

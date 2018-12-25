@@ -27,7 +27,7 @@ Login::Login(QWidget *parent) :
     ui->widget1->setGraphicsEffect(effect2);
 
 
-    // Declar
+    //Declar
 
     QtMaterialIconButton * close = new QtMaterialIconButton(QtMaterialTheme::icon("action", "highlight_off"));
     QtMaterialRaisedButton * login = new QtMaterialRaisedButton("Login");
@@ -47,7 +47,8 @@ Login::Login(QWidget *parent) :
     userpassword_textbox->setFixedWidth(300);
     userpassword_textbox->setEchoMode(QLineEdit::Password);
     toogl = false;
-    //add
+
+    //Add
 
     ui->label->setText("<img src=':/images/images/login.png'>");
     ui->label_3->setText("<img src=':/images/icon/ic_help_outline_24px.svg'>");
@@ -59,23 +60,30 @@ Login::Login(QWidget *parent) :
     ui->verticalLayout->addWidget(close);
 
 
-    // position
+    //Position
     ui->verticalLayout_2->setAlignment(userid_textbox, Qt::AlignCenter);
     ui->verticalLayout_3->setAlignment(userpassword_textbox, Qt::AlignCenter);
     ui->verticalLayout_4->setAlignment(login, Qt::AlignCenter);
     ui->verticalLayout_5->setAlignment(view, Qt::AlignCenter);
     ui->verticalLayout->setAlignment(close, Qt::AlignCenter);
 
-    //connect
+    //Connect
+
     connect(close, SIGNAL(clicked(bool)), this,SLOT(exit()));
     connect(view, SIGNAL(clicked(bool)), this,SLOT(password()));
-
-
+    connect(login,SIGNAL(clicked(bool)),this,SLOT(enter()));
 }
 
 Login::~Login()
 {
     delete ui;
+}
+void Login::enter()
+{
+
+    M.showMaximized();
+    this->hide();
+
 }
 
 void Login::exit()
@@ -100,7 +108,6 @@ void Login::password(){
         toogl = true;
 
     }
-
 
 
 }

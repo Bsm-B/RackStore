@@ -2,15 +2,17 @@
 #define LOGIN_H
 
 #include <QMainWindow>
-#include <qtmaterialiconbutton.h>
-#include <lib/qtmaterialtheme.h>
 #include <QColorDialog>
 #include <QDebug>
 #include <QPainter>
 #include <QThread>
+#include <qtmaterialiconbutton.h>
+#include <lib/qtmaterialtheme.h>
 #include <qtmaterialtextfield.h>
 #include <qtmaterialraisedbutton.h>
 #include <QGraphicsDropShadowEffect>
+#include "mainwindow.h"
+
 namespace Ui {
 class Login;
 }
@@ -23,6 +25,7 @@ private slots:
 
      void exit();
      void password();
+     void enter();
 
 public:
     explicit Login(QWidget *parent = nullptr);
@@ -33,6 +36,7 @@ private:
     QtMaterialIconButton * view;
     QtMaterialTextField * userpassword_textbox;
     bool toogl;
+    MainWindow  M;
 };
 
 #endif //

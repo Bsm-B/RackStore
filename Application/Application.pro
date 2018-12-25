@@ -23,13 +23,16 @@ PRE_TARGETDEPS += $$top_builddir/components/$(OBJECTS_DIR)/libcomponents.a
 
 SOURCES += \
     main.cpp \
-    login.cpp
+    login.cpp \
+    mainwindow.cpp
 
 HEADERS += \
-    login.h
+    login.h \
+    mainwindow.h
 
 FORMS += \
-    login.ui
+    login.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
