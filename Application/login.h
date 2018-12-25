@@ -7,6 +7,7 @@
 #include <QColorDialog>
 #include <QDebug>
 #include <QPainter>
+#include <QThread>
 #include <qtmaterialtextfield.h>
 #include <qtmaterialraisedbutton.h>
 #include <QGraphicsDropShadowEffect>

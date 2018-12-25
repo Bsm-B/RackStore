@@ -29,16 +29,15 @@ Login::Login(QWidget *parent) :
 
     // Declar
 
-    QtMaterialIconButton * close = new QtMaterialIconButton(QtMaterialTheme::icon("toggle", "star"));
+    QtMaterialIconButton * close = new QtMaterialIconButton(QtMaterialTheme::icon("action", "highlight_off"));
     QtMaterialRaisedButton * login = new QtMaterialRaisedButton("Login");
     QtMaterialTextField * userid_textbox = new QtMaterialTextField;
 
     //Init
-
-    close->setIconSize(QSize(16,16));
+    close->setIconSize(QSize(24,24));
     close->setUseThemeColors(true);
-    view->setIconSize(QSize(32,32));
-    view->setUseThemeColors(true);
+    view->setIconSize(QSize(16,16));
+    view->setColor(QColor(158,158,190));
 
     login->setRole(Material::Primary);
     login->setFixedWidth(300);
@@ -53,23 +52,21 @@ Login::Login(QWidget *parent) :
     ui->label->setText("<img src=':/images/images/login.png'>");
     ui->label_3->setText("<img src=':/images/icon/ic_help_outline_24px.svg'>");
     ui->label_2->setStyleSheet("QLabel { color : #9e9ebe }");
-    ui->verticalLayout->addWidget(close);
     ui->verticalLayout_2->addWidget(userid_textbox);
     ui->verticalLayout_3->addWidget(userpassword_textbox);
     ui->verticalLayout_4->addWidget(login);
     ui->verticalLayout_5->addWidget(view);
+    ui->verticalLayout->addWidget(close);
 
 
     // position
-    ui->verticalLayout->setAlignment(close, Qt::AlignCenter);
     ui->verticalLayout_2->setAlignment(userid_textbox, Qt::AlignCenter);
     ui->verticalLayout_3->setAlignment(userpassword_textbox, Qt::AlignCenter);
     ui->verticalLayout_4->setAlignment(login, Qt::AlignCenter);
     ui->verticalLayout_5->setAlignment(view, Qt::AlignCenter);
-
+    ui->verticalLayout->setAlignment(close, Qt::AlignCenter);
 
     //connect
-   // connect(login, SIGNAL(clicked(bool)), this,SLOT(setupForm()));
     connect(close, SIGNAL(clicked(bool)), this,SLOT(exit()));
     connect(view, SIGNAL(clicked(bool)), this,SLOT(password()));
 
@@ -84,12 +81,10 @@ Login::~Login()
 void Login::exit()
 {
     QCoreApplication::quit();
-    qDebug() << "Exit";
 }
 
 void Login::password(){
 
-    qDebug() << "Click";
 
 
     if (toogl)
@@ -97,17 +92,16 @@ void Login::password(){
         view->setIcon(QtMaterialTheme::icon("action", "visibility"));
         userpassword_textbox->setEchoMode(QLineEdit::Password);
         toogl = false;
-        qDebug() << "on";
 
     }else{
 
         view->setIcon(QtMaterialTheme::icon("action", "visibility_off"));
         userpassword_textbox->setEchoMode(QLineEdit::Normal);
         toogl = true;
-        qDebug() << "off";
 
     }
 
 
 
 }
+
