@@ -9,7 +9,7 @@
 #include <QPainter>
 #include <qtmaterialtextfield.h>
 #include <qtmaterialraisedbutton.h>
-
+#include <QGraphicsDropShadowEffect>
 namespace Ui {
 class Login;
 }

@@ -10,6 +10,23 @@ Login::Login(QWidget *parent) :
     toogl()
 {
     ui->setupUi(this);
+    setAttribute(Qt::WA_TranslucentBackground); //enable MainWindow to be transparent
+
+    QGraphicsDropShadowEffect* effect1 = new QGraphicsDropShadowEffect();
+    QGraphicsDropShadowEffect* effect2 = new QGraphicsDropShadowEffect();
+
+    effect1->setBlurRadius(9);
+    effect1->setColor(QColor(0, 0, 0, 150));
+    effect1->setOffset(-5,-5);
+
+    effect2->setBlurRadius(9);
+    effect2->setColor(QColor(0, 0, 0, 150));
+    effect2->setOffset(0,0);
+
+    ui->widget1->setGraphicsEffect(effect1);
+    ui->widget1->setGraphicsEffect(effect2);
+
+
     // Declar
 
     QtMaterialIconButton * close = new QtMaterialIconButton(QtMaterialTheme::icon("toggle", "star"));
