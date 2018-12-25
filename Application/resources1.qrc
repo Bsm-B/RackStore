@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/images">
-        <file>images/login.png</file>
         <file>icon/ic_help_outline_24px.svg</file>
+        <file>images/login.png</file>
     </qresource>
 </RCC>
