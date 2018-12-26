@@ -8,7 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     topbar(new QtMaterialAppBar),
-    button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "menu")))
+    button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "menu"))),
+    drawer(new QtMaterialDrawer)
+
 {
     //setup
     ui->setupUi(this);
@@ -16,19 +18,19 @@ MainWindow::MainWindow(QWidget *parent) :
     // Declar
 
     // Init
-    //ui->verticalLayout->addStretch(1);
     topbar->setMinimumWidth(1360);
     topbar->setMinimumHeight(60);
     button->setIconSize(QSize(24, 24));
     button->setColor(Qt::white);
     button->setFixedWidth(42);
-
+    drawer->setFixedWidth(250);
+    drawer->setClickOutsideToClose(true);
     // Add
     ui->verticalLayout->addWidget(topbar);
     ui->verticalLayout_3->addWidget(button);
+    ui->verticalLayout_2->addWidget(drawer);
     // Position
     topbar->move(5,3);
-
     //Connect
     connect(button,SIGNAL(clicked(bool)),this,SLOT(showdraw()));
 
@@ -40,7 +42,10 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::showdraw(){
-
-    button->move(420,13);
-
+    drawer->openDrawer();
+    QGraphicsDropShadowEffect* effect1 = new QGraphicsDropShadowEffect();
+    effect1->setBlurRadius(9);
+    effect1->setColor(QColor(0, 0, 0, 150));
+    effect1->setOffset(5,-3);
+    drawer->setGraphicsEffect(effect1);
 }

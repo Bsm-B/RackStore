@@ -5,6 +5,8 @@
 #include <lib/qtmaterialtheme.h>
 #include <qtmaterialappbar.h>
 #include <qtmaterialiconbutton.h>
+#include <qtmaterialdrawer.h>
+#include <QGraphicsDropShadowEffect>
 #include <QThread>
 
 namespace Ui {
@@ -27,6 +29,7 @@ private:
     Ui::MainWindow *ui;
     QtMaterialAppBar * topbar;
     QtMaterialIconButton *button;
+    QtMaterialDrawer * drawer;
 };
 
 #endif // MAINWINDOW_H
