@@ -8,6 +8,7 @@
 #include <qtmaterialdrawer.h>
 #include <QGraphicsDropShadowEffect>
 #include <QThread>
+#include "drawerwidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,7 @@ private:
     QtMaterialAppBar * topbar;
     QtMaterialIconButton *button;
     QtMaterialDrawer * drawer;
+    DrawerWidget * drawerwidget;
 };
 
 #endif // MAINWINDOW_H

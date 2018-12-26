@@ -16,7 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // Declar
-
+    QVBoxLayout *drawerLayout = new QVBoxLayout;
+    drawerwidget = new DrawerWidget;
     // Init
     topbar->setMinimumWidth(1360);
     topbar->setMinimumHeight(60);
@@ -25,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
     button->setFixedWidth(42);
     drawer->setFixedWidth(250);
     drawer->setClickOutsideToClose(true);
+    drawer->setDrawerLayout(drawerLayout);
+    drawerLayout->addWidget(drawerwidget);
     // Add
     ui->verticalLayout->addWidget(topbar);
     ui->verticalLayout_3->addWidget(button);

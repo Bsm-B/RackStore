@@ -2,5 +2,7 @@
     <qresource prefix="/images">
         <file>icon/ic_help_outline_24px.svg</file>
         <file>images/login.png</file>
+        <file>images/Rack.png</file>
+        <file>images/Avatar.jpg</file>
     </qresource>
 </RCC>
