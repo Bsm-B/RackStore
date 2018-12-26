@@ -80,9 +80,9 @@ Login::~Login()
 }
 void Login::enter()
 {
-
-    M.showMaximized();
     this->hide();
+    M.showMaximized();
+
 
 }
 
