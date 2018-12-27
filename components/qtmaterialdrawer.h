@@ -32,7 +32,6 @@ public:
 public slots:
     void openDrawer();
     void closeDrawer();
-
 protected:
     bool event(QEvent *event) Q_DECL_OVERRIDE;
     bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;

@@ -39,6 +39,8 @@ private:
     QtMaterialFlatButton * bt_cart ;
     QtMaterialFlatButton * bt_parking ;
     QtMaterialFlatButton * bt_feed ;
+    QtMaterialFlatButton * bt_logout ;
+
 
 };
 

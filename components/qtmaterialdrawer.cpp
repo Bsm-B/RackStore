@@ -151,7 +151,6 @@ void QtMaterialDrawer::openDrawer()
     Q_D(QtMaterialDrawer);
 
     emit d->stateMachine->signalOpen();
-
     if (d->autoRaise) {
         raise();
     }
@@ -164,7 +163,6 @@ void QtMaterialDrawer::closeDrawer()
     Q_D(QtMaterialDrawer);
 
     emit d->stateMachine->signalClose();
-
     if (d->overlay) {
         setAttribute(Qt::WA_TransparentForMouseEvents);
         setAttribute(Qt::WA_NoSystemBackground);
@@ -232,3 +230,5 @@ void QtMaterialDrawer::paintEvent(QPaintEvent *event)
     painter.setOpacity(d->stateMachine->opacity());
     painter.fillRect(rect(), Qt::SolidPattern);
 }
+
+

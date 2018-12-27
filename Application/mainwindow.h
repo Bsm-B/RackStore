@@ -9,6 +9,9 @@
 #include <QGraphicsDropShadowEffect>
 #include <QThread>
 #include "drawerwidget.h"
+#include <qtmaterialavatar.h>
+#include <qtmaterialbadge.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +24,7 @@ class MainWindow : public QMainWindow
 private slots:
 
     void showdraw();
+    void hidedraw();
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
@@ -30,8 +34,12 @@ private:
     Ui::MainWindow *ui;
     QtMaterialAppBar * topbar;
     QtMaterialIconButton *button;
+    QtMaterialIconButton *notif;
+    QtMaterialIconButton *email;
     QtMaterialDrawer * drawer;
     DrawerWidget * drawerwidget;
+    QtMaterialAvatar * fromav;
+
 };
 
 #endif // MAINWINDOW_H

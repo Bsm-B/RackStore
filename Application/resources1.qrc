@@ -4,5 +4,6 @@
         <file>images/login.png</file>
         <file>images/Rack.png</file>
         <file>images/Avatar.jpg</file>
+        <file>images/logo.svg</file>
     </qresource>
 </RCC>

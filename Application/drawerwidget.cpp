@@ -10,20 +10,28 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     Avatar = new QImage(":/images/images/Avatar.jpg");
     fromav->setImage((*Avatar));
     fromav->setSize(64);
-    ui->label->setText("<img src=':/images/images/Rack.png'>");
+    ui->label->setText("<img src=':/images/images/logo.svg'>");
+
     ui->verticalLayout_2->addWidget(fromav);
     ui->label_3->setFont(QFont("Roboto", 10, QFont::Light));
     ui->label_4->setFont(QFont("Roboto", 9, QFont::Light));
     ui->label_3->setStyleSheet("QLabel { color : #9e9ebe }");
     ui->label_4->setStyleSheet("QLabel { color : #9e9ebe }");
 
-     bt_dashboard = new QtMaterialFlatButton("DASHBOARD");
-     bt_local = new QtMaterialFlatButton("LOCAL MANAGEMENT");
-     bt_client = new QtMaterialFlatButton("CLIENT");
-     bt_ray = new QtMaterialFlatButton("RAYS");
-     bt_cart = new QtMaterialFlatButton("CARTS");
-     bt_parking = new QtMaterialFlatButton("PARKING");
-     bt_feed = new QtMaterialFlatButton("FEEDBACKS");
+    bt_dashboard = new QtMaterialFlatButton("DASHBOARD");
+    bt_local = new QtMaterialFlatButton("LOCAL MANAGEMENT");
+    bt_client = new QtMaterialFlatButton("CLIENT");
+    bt_ray = new QtMaterialFlatButton("RAYS");
+    bt_cart = new QtMaterialFlatButton("CARTS");
+    bt_parking = new QtMaterialFlatButton("PARKING");
+    bt_feed = new QtMaterialFlatButton("FEEDBACKS");
+    bt_logout  = new QtMaterialFlatButton("LOGOUT");
+
+     QLabel * line = new QLabel("<hr>");
+     line->setStyleSheet("QLabel { color : #9e9ebe }");
+     QLabel * copyright = new QLabel("© 2018 Rackoons Team");
+     copyright->setStyleSheet("QLabel { color : #9e9ebe }");
+     copyright->setFont(QFont("Roboto", 8, QFont::Thin));
 
     bt_dashboard->setRole(Material::Primary);
     bt_local->setRole(Material::Primary);
@@ -32,6 +40,8 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     bt_cart->setRole(Material::Primary);
     bt_parking->setRole(Material::Primary);
     bt_feed->setRole(Material::Primary);
+    bt_logout->setRole(Material::Primary);
+
 
 
     bt_dashboard->setIcon(QtMaterialTheme::icon("action", "dashboard"));
@@ -41,16 +51,19 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     bt_cart->setIcon(QtMaterialTheme::icon("action", "shopping_cart"));
     bt_parking->setIcon(QtMaterialTheme::icon("maps", "local_parking"));
     bt_feed->setIcon(QtMaterialTheme::icon("action", "feedback"));
+    bt_logout->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
 
 
 
-    bt_dashboard->setFixedHeight(56);
-    bt_local->setFixedHeight(56);
-    bt_client->setFixedHeight(56);
-    bt_ray->setFixedHeight(56);
-    bt_cart->setFixedHeight(56);
-    bt_parking->setFixedHeight(56);
-    bt_feed->setFixedHeight(56);
+    bt_dashboard->setFixedHeight(52);
+    bt_local->setFixedHeight(52);
+    bt_client->setFixedHeight(52);
+    bt_ray->setFixedHeight(52);
+    bt_cart->setFixedHeight(52);
+    bt_parking->setFixedHeight(52);
+    bt_feed->setFixedHeight(52);
+    bt_logout->setFixedHeight(52);
+
 
 
     bt_dashboard->setIconSize(QSize(24,24));
@@ -60,7 +73,7 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     bt_cart->setIconSize(QSize(24,24));
     bt_parking->setIconSize(QSize(24,24));
     bt_feed->setIconSize(QSize(24,24));
-
+    bt_logout->setIconSize(QSize(24,24));
 
 
     bt_dashboard->setCheckable(true);
@@ -71,6 +84,14 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     bt_parking->setCheckable(true);
     bt_feed->setCheckable(true);
 
+    bt_dashboard->setOverlayStyle(Material::TintedOverlay);
+    bt_local->setOverlayStyle(Material::TintedOverlay);
+    bt_client->setOverlayStyle(Material::TintedOverlay);
+    bt_ray->setOverlayStyle(Material::TintedOverlay);
+    bt_cart->setOverlayStyle(Material::TintedOverlay);
+    bt_parking->setOverlayStyle(Material::TintedOverlay);
+    bt_feed->setOverlayStyle(Material::TintedOverlay);
+    bt_logout->setIconSize(QSize(24,24));
 
     bt_dashboard->setTextAlignment(Qt::AlignLeft);
     bt_local->setTextAlignment(Qt::AlignLeft);
@@ -79,6 +100,7 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     bt_cart->setTextAlignment(Qt::AlignLeft);
     bt_parking->setTextAlignment(Qt::AlignLeft);
     bt_feed->setTextAlignment(Qt::AlignLeft);
+    bt_logout->setTextAlignment(Qt::AlignLeft);
 
     ui->verticalLayout->addWidget(bt_dashboard);
     ui->verticalLayout->addWidget(bt_local);
@@ -87,6 +109,9 @@ DrawerWidget::DrawerWidget(QWidget *parent) :
     ui->verticalLayout->addWidget(bt_cart);
     ui->verticalLayout->addWidget(bt_parking);
     ui->verticalLayout->addWidget(bt_feed);
+    ui->verticalLayout->addWidget(line);
+    ui->verticalLayout->addWidget(bt_logout);
+    ui->verticalLayout->addWidget(copyright);
 
     //connect
     connect(bt_dashboard,SIGNAL(clicked(bool)),this,SLOT(dashboard_cliked()));

@@ -32,13 +32,13 @@ void QtMaterialBadgePrivate::init()
 
     x              = 0;
     y              = 0;
-    padding        = 10;
+    padding        = 6;
     useThemeColors = true;
 
     q->setAttribute(Qt::WA_TransparentForMouseEvents);
 
     QFont font(q->font());
-    font.setPointSizeF(10);
+    font.setPointSizeF(6);
     font.setStyleName("Bold");
     q->setFont(font);
 
