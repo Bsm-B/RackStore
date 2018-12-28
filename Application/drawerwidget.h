@@ -19,6 +19,15 @@ public:
     explicit DrawerWidget(QWidget *parent = nullptr);
     ~DrawerWidget();
     QImage * Avatar;
+    QtMaterialFlatButton * bt_dashboard ;
+    QtMaterialFlatButton * bt_local ;
+    QtMaterialFlatButton * bt_client ;
+    QtMaterialFlatButton * bt_ray ;
+    QtMaterialFlatButton * bt_cart ;
+    QtMaterialFlatButton * bt_parking ;
+    QtMaterialFlatButton * bt_feed ;
+    QtMaterialFlatButton * bt_logout ;
+
 private slots:
 
    void dashboard_cliked();
@@ -32,15 +41,6 @@ private slots:
 private:
     Ui::DrawerWidget *ui;
     QtMaterialAvatar * fromav;
-    QtMaterialFlatButton * bt_dashboard ;
-    QtMaterialFlatButton * bt_local ;
-    QtMaterialFlatButton * bt_client ;
-    QtMaterialFlatButton * bt_ray ;
-    QtMaterialFlatButton * bt_cart ;
-    QtMaterialFlatButton * bt_parking ;
-    QtMaterialFlatButton * bt_feed ;
-    QtMaterialFlatButton * bt_logout ;
-
 
 };
 

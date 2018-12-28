@@ -11,6 +11,7 @@
 #include "drawerwidget.h"
 #include <qtmaterialavatar.h>
 #include <qtmaterialbadge.h>
+#include <qtmaterialfab.h>
 #include <QMouseEvent>
 #include <QEvent>
 
@@ -25,7 +26,15 @@ class MainWindow : public QMainWindow
 private slots:
 
     void showdraw();
-    void hidedraw();
+    void set_tab_dash();
+    void set_tab_local();
+    void set_tab_client();
+    void set_tab_ray();
+    void set_tab_cart();
+    void set_tab_parking();
+    void set_tab_feed();
+    void set_tab_settings();
+    void logout();
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
@@ -41,6 +50,7 @@ private:
     QtMaterialDrawer * drawer;
     DrawerWidget * drawerwidget;
     QtMaterialAvatar * fromav;
+    QtMaterialFloatingActionButton * settings ;
 
 };
 
