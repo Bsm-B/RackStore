@@ -28,7 +28,8 @@ public:
 
     void setOverlayMode(bool value);
     bool overlayMode() const;
-
+    void setclosed(int);
+    bool getclosed();
 public slots:
     void openDrawer();
     void closeDrawer();
@@ -42,6 +43,7 @@ protected:
 private:
     Q_DISABLE_COPY(QtMaterialDrawer)
     Q_DECLARE_PRIVATE(QtMaterialDrawer)
+    bool closed = false;
 };
 
 #endif // QTMATERIALDRAWER_H

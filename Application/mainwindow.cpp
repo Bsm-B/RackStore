@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent) :
     fromav->setSize(46);
     QtMaterialBadge *badgenotif = new QtMaterialBadge;
     QtMaterialBadge *badgemail = new QtMaterialBadge;
-
+    QVBoxLayout * layerwidget = new QVBoxLayout;
     // Init
     topbar->setMinimumWidth(1360);
     topbar->setMinimumHeight(60);
@@ -57,26 +57,31 @@ MainWindow::MainWindow(QWidget *parent) :
     badgemail->setText("69");
     badgemail->sizeHint();
     // Add
+
     ui->verticalLayout->addWidget(topbar);
-    ui->verticalLayout_2->addWidget(drawer);
     ui->verticalLayout_4->addWidget(fromav);
     ui->horizontalLayout->addWidget(button);
     ui->horizontalLayout_2->addWidget(notif);
     ui->horizontalLayout_2->addWidget(email);
-
-
-
+    layerwidget->addWidget(drawer);
+    ui->widget->setLayout(layerwidget);
+    ui->widget->hide();
    // Position
     topbar->move(5,3);
     //Connect
     connect(button,SIGNAL(clicked(bool)),this,SLOT(showdraw()));
-
-
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::mousePressEvent(QMouseEvent *event)
+{
+   if(drawer->getclosed()){
+       ui->widget->hide();
+   }
 }
 void MainWindow::hidedraw()
 {
@@ -85,6 +90,7 @@ void MainWindow::hidedraw()
 }
 
 void MainWindow::showdraw(){
+    ui->widget->show();
     drawer->openDrawer();
     QGraphicsDropShadowEffect* effect1 = new QGraphicsDropShadowEffect();
     effect1->setBlurRadius(9);

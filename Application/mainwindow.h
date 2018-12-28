@@ -11,7 +11,8 @@
 #include "drawerwidget.h"
 #include <qtmaterialavatar.h>
 #include <qtmaterialbadge.h>
-
+#include <QMouseEvent>
+#include <QEvent>
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +30,8 @@ private slots:
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+protected:
+    void mousePressEvent(QMouseEvent * event) override;
 private:
     Ui::MainWindow *ui;
     QtMaterialAppBar * topbar;

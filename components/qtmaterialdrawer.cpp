@@ -146,6 +146,20 @@ bool QtMaterialDrawer::overlayMode() const
     return d->overlay;
 }
 
+void QtMaterialDrawer::setclosed(int flag)
+{
+    if (flag == 1) {
+        closed = true;
+    }else{
+        closed = false;
+    }
+}
+
+bool QtMaterialDrawer::getclosed()
+{
+    return closed;
+}
+
 void QtMaterialDrawer::openDrawer()
 {
     Q_D(QtMaterialDrawer);
@@ -156,17 +170,20 @@ void QtMaterialDrawer::openDrawer()
     }
     setAttribute(Qt::WA_TransparentForMouseEvents, false);
     setAttribute(Qt::WA_NoSystemBackground, false);
+    setclosed(0);
+
 }
 
 void QtMaterialDrawer::closeDrawer()
 {
     Q_D(QtMaterialDrawer);
-
-    emit d->stateMachine->signalClose();
+    emit d->stateMachine->signalClose();    
     if (d->overlay) {
         setAttribute(Qt::WA_TransparentForMouseEvents);
         setAttribute(Qt::WA_NoSystemBackground);
     }
+    setclosed(1);
+
 }
 
 bool QtMaterialDrawer::event(QEvent *event)
@@ -230,5 +247,6 @@ void QtMaterialDrawer::paintEvent(QPaintEvent *event)
     painter.setOpacity(d->stateMachine->opacity());
     painter.fillRect(rect(), Qt::SolidPattern);
 }
+
 
 
