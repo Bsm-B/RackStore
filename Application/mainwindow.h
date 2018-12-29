@@ -52,6 +52,7 @@ private:
     QtMaterialAvatar * fromav;
     QtMaterialFloatingActionButton * settings ;
 
+
 };
 
 #endif // MAINWINDOW_H

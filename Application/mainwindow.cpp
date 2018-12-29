@@ -59,7 +59,6 @@ MainWindow::MainWindow(QWidget *parent) :
     settings->setRole(Material::Primary);
     settings->setCorner(Qt::BottomRightCorner);
     // Add
-
     ui->verticalLayout->addWidget(topbar);
     ui->verticalLayout_4->addWidget(fromav);
     ui->horizontalLayout->addWidget(button);
