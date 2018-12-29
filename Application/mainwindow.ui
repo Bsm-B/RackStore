@@ -120,12 +120,12 @@
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>1346</width>
-      <height>681</height>
+      <width>1345</width>
+      <height>680</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -203,25 +203,6 @@
      <attribute name="title">
       <string>Page</string>
      </attribute>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>100</y>
-        <width>151</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Roboto</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ray</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">

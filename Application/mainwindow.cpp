@@ -27,6 +27,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QtMaterialBadge *badgenotif = new QtMaterialBadge;
     QtMaterialBadge *badgemail = new QtMaterialBadge;
     QVBoxLayout * layerwidget = new QVBoxLayout;
+
+    // Declar Widget
+
+    ray_widget = new Ray;
+    QVBoxLayout * ray_layout = new QVBoxLayout;
     // Init
     topbar->setMinimumWidth(1360);
     topbar->setMinimumHeight(60);
@@ -68,6 +73,10 @@ MainWindow::MainWindow(QWidget *parent) :
     layerwidget->addWidget(drawer);
     ui->widget->setLayout(layerwidget);
     ui->widget->hide();
+
+    // Add Module Widget
+    ray_layout->addWidget(ray_widget);
+    ui->tab_4->setLayout(ray_layout);
    // Position
     topbar->move(5,3);
     //Connect

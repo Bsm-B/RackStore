@@ -9,6 +9,7 @@
 #include <QGraphicsDropShadowEffect>
 #include <QThread>
 #include "drawerwidget.h"
+#include "ray.h"
 #include <qtmaterialavatar.h>
 #include <qtmaterialbadge.h>
 #include <qtmaterialfab.h>
@@ -51,7 +52,7 @@ private:
     DrawerWidget * drawerwidget;
     QtMaterialAvatar * fromav;
     QtMaterialFloatingActionButton * settings ;
-
+    Ray * ray_widget;
 
 };
 

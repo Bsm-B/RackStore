@@ -47,4 +47,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources1.qrc \
-    ../components/resources.qrc
+    ../components/resources.qrc \
+    ../ray_resources.qrc

@@ -1,5 +1,6 @@
 #include "login.h"
 #include <QApplication>
+#include "ray.h"
 
 int main(int argc, char *argv[])
 {
@@ -7,5 +8,7 @@ int main(int argc, char *argv[])
     Login l;
     l.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     l.show();
+    //Ray r;
+  //  r.show();
     return a.exec();
 }

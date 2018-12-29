@@ -1,21 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>Ray</class>
  <widget class="QWidget" name="Ray">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1345</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>282</width>
+     <height>106</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Icon</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>40</y>
+     <width>282</width>
+     <height>106</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Icon</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>40</y>
+     <width>282</width>
+     <height>106</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Icon</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>40</y>
+     <width>282</width>
+     <height>106</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Icon</string>
+   </property>
+  </widget>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>
