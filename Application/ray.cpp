@@ -6,13 +6,24 @@ Ray::Ray(QWidget *parent) :
     ui(new Ui::Ray)
 {
     ui->setupUi(this);
-    ui->label->setText("<img src='://Application/images/Ray/paper1.png'>");
-    ui->label_2->setText("<img src='://Application/images/Ray/paper2.png'>");
-    ui->label_3->setText("<img src='://Application/images/Ray/paper3.png'>");
-    ui->label_4->setText("<img src='://Application/images/Ray/paper4.png'>");
+    Card("#ffffff",ui->widget);
 }
 
 Ray::~Ray()
 {
     delete ui;
+}
+
+void Ray::Card(QString color , QWidget * wd)
+{
+    QGraphicsDropShadowEffect* effect = new QGraphicsDropShadowEffect();
+    QVBoxLayout *widgetlayout = new QVBoxLayout;
+    QString style = ".QWidget { background: " + color +
+                    ";  border: 1px solid #d7dfe3;  border-radius: 4px; }";
+    wd->setStyleSheet(style);
+    effect->setBlurRadius(20);
+    effect->setColor(QColor(0, 0, 0, 50));
+    effect->setOffset(0,0);
+    wd->setGraphicsEffect(effect);
+    wd->setLayout(widgetlayout);
 }

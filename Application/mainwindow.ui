@@ -124,8 +124,12 @@
       <height>680</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">.QWidget { background: #edf4f8; }
+</string>
+    </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">

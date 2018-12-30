@@ -13,56 +13,67 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>40</y>
-     <width>282</width>
-     <height>106</height>
+     <y>60</y>
+     <width>301</width>
+     <height>111</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Icon</string>
-   </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>40</y>
-     <width>282</width>
-     <height>106</height>
+     <x>50</x>
+     <y>280</y>
+     <width>511</width>
+     <height>211</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Icon</string>
+  </widget>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>60</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QWidget" name="widget_4" native="true">
    <property name="geometry">
     <rect>
      <x>700</x>
-     <y>40</y>
-     <width>282</width>
-     <height>106</height>
+     <y>60</y>
+     <width>301</width>
+     <height>111</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>Icon</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QWidget" name="widget_5" native="true">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>40</y>
-     <width>282</width>
-     <height>106</height>
+     <x>1010</x>
+     <y>60</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>220</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Icon</string>
+    <string>PushButton</string>
    </property>
   </widget>
  </widget>

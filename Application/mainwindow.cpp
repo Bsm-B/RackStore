@@ -90,6 +90,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(drawerwidget->bt_feed,SIGNAL(clicked(bool)),this,SLOT(set_tab_feed()));
     connect(drawerwidget->bt_logout,SIGNAL(clicked(bool)),this,SLOT(logout()));
     connect(settings,SIGNAL(clicked(bool)),this,SLOT(set_tab_settings()));
+
 }
 
 MainWindow::~MainWindow()
