@@ -4,6 +4,12 @@
 #include <QWidget>
 #include <QGraphicsDropShadowEffect>
 #include <QVBoxLayout>
+#include <qtmaterialappbar.h>
+#include <qtmaterialiconbutton.h>
+#include <lib/qtmaterialtheme.h>
+#include <QLabel>
+#include <qtmaterialiconbutton.h>
+
 namespace Ui {
 class Ray;
 }
@@ -18,6 +24,8 @@ public:
     void Card(QString, QWidget *);
 private:
     Ui::Ray *ui;
+     QtMaterialAppBar       *notif_appbar;
+     QtMaterialIconButton *button;
 };
 
 #endif // RAY_H

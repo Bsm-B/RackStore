@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1345</width>
-    <height>680</height>
+    <height>926</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,64 +17,116 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>60</y>
-     <width>301</width>
-     <height>111</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>280</y>
-     <width>511</width>
-     <height>211</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_3" native="true">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>60</y>
-     <width>301</width>
-     <height>111</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_4" native="true">
-   <property name="geometry">
-    <rect>
-     <x>700</x>
-     <y>60</y>
-     <width>301</width>
-     <height>111</height>
+     <y>30</y>
+     <width>261</width>
+     <height>100</height>
     </rect>
    </property>
   </widget>
   <widget class="QWidget" name="widget_5" native="true">
    <property name="geometry">
     <rect>
-     <x>1010</x>
-     <y>60</y>
-     <width>301</width>
-     <height>111</height>
+     <x>20</x>
+     <y>160</y>
+     <width>711</width>
+     <height>321</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>220</y>
-     <width>75</width>
-     <height>23</height>
+     <x>380</x>
+     <y>30</y>
+     <width>261</width>
+     <height>100</height>
     </rect>
    </property>
-   <property name="text">
-    <string>PushButton</string>
+  </widget>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>30</y>
+     <width>261</width>
+     <height>100</height>
+    </rect>
    </property>
+  </widget>
+  <widget class="QWidget" name="widget_4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>30</y>
+     <width>261</width>
+     <height>100</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_7" native="true">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>160</y>
+     <width>531</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>51</y>
+      <width>533</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_6" native="true">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>500</y>
+     <width>681</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Thin</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Item</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
