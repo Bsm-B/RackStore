@@ -30,13 +30,18 @@ Ray::Ray(QWidget *parent) :
 
      button->setIconSize(QSize(16, 16));
      button->setColor(Qt::white);
-
      notif_appbar->appBarLayout()->addWidget(button);
      notif_appbar->appBarLayout()->addWidget(label);
     ui->verticalLayout->addWidget(notif_appbar);
-
-
-
+    //ui->label_2->setcol
+    ui->label_2->setStyleSheet(".QLabel { color: white }");
+    ui->label_3->setStyleSheet(".QLabel { color: white }");
+    ui->label_4->setStyleSheet(".QLabel { color: white }");
+    ui->label_5->setStyleSheet(".QLabel { color: white }");
+    ui->label_6->setStyleSheet(".QLabel { color: white }");
+    ui->label_7->setStyleSheet(".QLabel { color: white }");
+    ui->label_8->setStyleSheet(".QLabel { color: white }");
+    ui->label_9->setStyleSheet(".QLabel { color: white }");
 }
 
 Ray::~Ray()
