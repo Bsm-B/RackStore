@@ -27,21 +27,30 @@ SOURCES += \
     mainwindow.cpp \
     drawerwidget.cpp \
     ray.cpp \
-    ray_create1.cpp
+    ray_create1.cpp \
+    ray_update1.cpp \
+    ray_create2.cpp \
+    ray_update2.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
     drawerwidget.h \
     ray.h \
-    ray_create1.h
+    ray_create1.h \
+    ray_update1.h \
+    ray_create2.h \
+    ray_update2.h
 
 FORMS += \
     login.ui \
     mainwindow.ui \
     drawerwidget.ui \
     ray.ui \
-    ray_create1.ui
+    ray_create1.ui \
+    ray_update1.ui \
+    ray_create2.ui \
+    ray_update2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

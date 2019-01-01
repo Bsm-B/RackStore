@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <qtmaterialiconbutton.h>
 #include <qtmaterialfab.h>
+#include <qtmaterialdialog.h>
 
 
 
@@ -25,12 +26,19 @@ public:
     explicit Ray(QWidget *parent = nullptr);
     ~Ray();
     void Card(QString, QWidget *);
+    void show_Creatpanel1();
+    void hide_Creatpanel1();
+
+    void show_updatepanel1();
+    void hide_updatepanel1();
 private slots:
 
 
 private:
     Ui::Ray *ui;
      QtMaterialAppBar       *notif_appbar;
+     QtMaterialDialog       * m_dialog;
+     QtMaterialDialog       * m_dialog2;
      QtMaterialIconButton *button;
      QtMaterialFloatingActionButton * btn_add_c2;
      QtMaterialFloatingActionButton * btn_update_c2;

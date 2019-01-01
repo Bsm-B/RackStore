@@ -513,9 +513,9 @@ border-style: hidden;
    <widget class="QWidget" name="widget_14" native="true">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>299</x>
       <y>10</y>
-      <width>80</width>
+      <width>91</width>
       <height>240</height>
      </rect>
     </property>

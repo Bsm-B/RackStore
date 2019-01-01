@@ -1,10 +1,14 @@
 #include "ray.h"
 #include "ui_ray.h"
+#include "ray_create1.h"
+#include "ray_update1.h"
 
 Ray::Ray(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Ray),
     notif_appbar(new QtMaterialAppBar),
+    m_dialog(new QtMaterialDialog),
+    m_dialog2(new QtMaterialDialog),
     button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "more_vert"))),
     btn_add_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
     btn_update_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
@@ -74,7 +78,40 @@ Ray::Ray(QWidget *parent) :
     ui->verticalLayout_7->addWidget(btn_delete_c1);
 
 
+    btn_update_c1->hide();
+    btn_update_c2->hide();
+    btn_delete_c1->hide();
+    btn_delete_c2->hide();
 
+    m_dialog->setParent(this);
+    m_dialog2->setParent(this);
+
+    m_dialog->hide();
+    m_dialog2->hide();
+
+
+
+    QVBoxLayout *dialogWidgetLayout = new QVBoxLayout;
+    QVBoxLayout *dialogWidgetLayout2 = new QVBoxLayout;
+
+    Ray_Create1 *RC1 = new Ray_Create1;
+    Ray_update1 *RU1 = new Ray_update1;
+
+    dialogWidgetLayout->addWidget(RC1);
+    dialogWidgetLayout2->addWidget(RU1);
+
+    RC1->setMinimumHeight(480);
+    RU1->setMinimumHeight(500);
+
+    m_dialog->setWindowLayout(dialogWidgetLayout);
+    m_dialog2->setWindowLayout(dialogWidgetLayout2);
+
+
+     connect(btn_add_c1,&QtMaterialIconButton::pressed,this,[=](){show_Creatpanel1();});
+     connect(RC1->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_Creatpanel1();});
+
+     connect(btn_update_c1,&QtMaterialIconButton::pressed,this,[=](){show_updatepanel1();});
+     connect(RU1->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_updatepanel1();});
 
 
 }
@@ -96,6 +133,31 @@ void Ray::Card(QString color , QWidget * wd)
     effect->setOffset(0,0);
     wd->setGraphicsEffect(effect);
     wd->setLayout(widgetlayout);
+}
+
+void Ray::show_Creatpanel1()
+{
+    m_dialog->show();
+    m_dialog->showDialog();
+    btn_update_c1->show();
+}
+
+void Ray::hide_Creatpanel1()
+{
+    m_dialog->hideDialog();
+    m_dialog->hide();
+}
+
+void Ray::show_updatepanel1()
+{
+    m_dialog2->show();
+    m_dialog2->showDialog();
+}
+
+void Ray::hide_updatepanel1()
+{
+    m_dialog2->hideDialog();
+    m_dialog2->hide();
 }
 
 
