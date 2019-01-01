@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QScrollArea>
 
 #include <QDebug>
 
@@ -64,6 +65,7 @@ MainWindow::MainWindow(QWidget *parent) :
     settings->setRole(Material::Primary);
     settings->setCorner(Qt::BottomRightCorner);
     // Add
+
     ui->verticalLayout->addWidget(topbar);
     ui->verticalLayout_4->addWidget(fromav);
     ui->horizontalLayout->addWidget(button);
@@ -77,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // Add Module Widget
     ray_layout->addWidget(ray_widget);
     ui->tab_4->setLayout(ray_layout);
+
    // Position
     topbar->move(5,3);
     //Connect
@@ -90,7 +93,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(drawerwidget->bt_feed,SIGNAL(clicked(bool)),this,SLOT(set_tab_feed()));
     connect(drawerwidget->bt_logout,SIGNAL(clicked(bool)),this,SLOT(logout()));
     connect(settings,SIGNAL(clicked(bool)),this,SLOT(set_tab_settings()));
-
+  //  connect(drawerwidget->bt_cart,&QtMaterialIconButton::pressed,this,[=](){});
 }
 
 MainWindow::~MainWindow()
@@ -159,4 +162,10 @@ void MainWindow::set_tab_settings()
 void MainWindow::logout()
 {
     QCoreApplication::exit();
+}
+
+void MainWindow::on_verticalScrollBar_valueChanged(int value)
+{
+        ray_widget->move(10,-1 * ui->verticalScrollBar->value());
+
 }

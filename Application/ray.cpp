@@ -12,10 +12,13 @@ Ray::Ray(QWidget *parent) :
     Card("#7460ee",ui->widget_2);
     Card("#26c6da",ui->widget_3);
     Card("#ffb22b",ui->widget_4);
-
     Card("#ffffff",ui->widget_5);
     Card("#ffffff",ui->widget_6);
     Card("#ffffff",ui->widget_7);
+    Card("#ffffff",ui->widget_8);
+    Card("#ffffff",ui->widget_9);
+    Card("#ffffff",ui->widget_10);
+
      notif_appbar->setMaximumHeight(260);
      QLabel *label = new QLabel("Notifications");
      label->setAttribute(Qt::WA_TranslucentBackground);
@@ -42,6 +45,13 @@ Ray::Ray(QWidget *parent) :
     ui->label_7->setStyleSheet(".QLabel { color: white }");
     ui->label_8->setStyleSheet(".QLabel { color: white }");
     ui->label_9->setStyleSheet(".QLabel { color: white }");
+    ui->label_14->setStyleSheet(".QLabel { color : #9e9ebe }");
+    ui->label_15->setStyleSheet(".QLabel { color : #9e9ebe }");
+    ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
+    ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
+    ui->label_21->setStyleSheet(".QLabel { color : #9e9ebe }");
+
+
 }
 
 Ray::~Ray()
@@ -62,3 +72,5 @@ void Ray::Card(QString color , QWidget * wd)
     wd->setGraphicsEffect(effect);
     wd->setLayout(widgetlayout);
 }
+
+

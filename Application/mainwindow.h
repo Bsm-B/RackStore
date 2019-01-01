@@ -37,6 +37,8 @@ private slots:
     void set_tab_settings();
     void logout();
 
+    void on_verticalScrollBar_valueChanged(int value);
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

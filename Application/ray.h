@@ -22,6 +22,9 @@ public:
     explicit Ray(QWidget *parent = nullptr);
     ~Ray();
     void Card(QString, QWidget *);
+private slots:
+
+
 private:
     Ui::Ray *ui;
      QtMaterialAppBar       *notif_appbar;

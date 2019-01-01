@@ -121,7 +121,7 @@
       <x>10</x>
       <y>40</y>
       <width>1345</width>
-      <height>680</height>
+      <height>1400</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -129,7 +129,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -207,6 +207,28 @@
      <attribute name="title">
       <string>Page</string>
      </attribute>
+     <widget class="QScrollBar" name="verticalScrollBar">
+      <property name="geometry">
+       <rect>
+        <x>1320</x>
+        <y>10</y>
+        <width>20</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>1000</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -310,7 +332,7 @@
      <rect>
       <x>1220</x>
       <y>610</y>
-      <width>151</width>
+      <width>111</width>
       <height>111</height>
      </rect>
     </property>

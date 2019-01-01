@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1345</width>
-    <height>926</height>
+    <height>1466</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,10 +72,48 @@
     <rect>
      <x>20</x>
      <y>160</y>
-     <width>711</width>
+     <width>721</width>
      <height>321</height>
     </rect>
    </property>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Chart 1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Descriptions</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
@@ -245,7 +283,7 @@
      <x>770</x>
      <y>160</y>
      <width>531</width>
-     <height>261</height>
+     <height>281</height>
     </rect>
    </property>
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -265,7 +303,7 @@
       <x>3</x>
       <y>48</y>
       <width>525</width>
-      <height>211</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -287,29 +325,192 @@ border-style: hidden;
   <widget class="QWidget" name="widget_6" native="true">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>500</y>
-     <width>681</width>
-     <height>301</height>
+     <x>850</x>
+     <y>460</y>
+     <width>451</width>
+     <height>431</height>
     </rect>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>61</width>
+      <y>20</y>
+      <width>131</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Roboto Thin</family>
-      <pointsize>9</pointsize>
+      <family>Roboto</family>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Item</string>
+     <string>Chart 2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Descriptions</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_8" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>510</y>
+     <width>801</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>View 2D</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Descriptions</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_9" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>920</y>
+     <width>371</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Descriptions</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CRUD 1</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_10" native="true">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>920</y>
+     <width>861</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Descriptions</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>CRUD 2</string>
     </property>
    </widget>
   </widget>
