@@ -2,6 +2,8 @@
 #include "ui_ray.h"
 #include "ray_create1.h"
 #include "ray_update1.h"
+#include "ray_create2.h"
+#include "ray_update2.h"
 
 Ray::Ray(QWidget *parent) :
     QWidget(parent),
@@ -9,6 +11,8 @@ Ray::Ray(QWidget *parent) :
     notif_appbar(new QtMaterialAppBar),
     m_dialog(new QtMaterialDialog),
     m_dialog2(new QtMaterialDialog),
+    m_dialog3(new QtMaterialDialog),
+    m_dialog4(new QtMaterialDialog),
     button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "more_vert"))),
     btn_add_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
     btn_update_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
@@ -85,33 +89,55 @@ Ray::Ray(QWidget *parent) :
 
     m_dialog->setParent(this);
     m_dialog2->setParent(this);
+    m_dialog3->setParent(this);
+    m_dialog4->setParent(this);
 
     m_dialog->hide();
     m_dialog2->hide();
-
+    m_dialog3->hide();
+    m_dialog4->hide();
 
 
     QVBoxLayout *dialogWidgetLayout = new QVBoxLayout;
     QVBoxLayout *dialogWidgetLayout2 = new QVBoxLayout;
+    QVBoxLayout *dialogWidgetLayout3 = new QVBoxLayout;
+    QVBoxLayout *dialogWidgetLayout4 = new QVBoxLayout;
 
     Ray_Create1 *RC1 = new Ray_Create1;
     Ray_update1 *RU1 = new Ray_update1;
+    Ray_Create2 *RC2 = new Ray_Create2;
+    Ray_Update2 *RU2 = new Ray_Update2;
 
     dialogWidgetLayout->addWidget(RC1);
     dialogWidgetLayout2->addWidget(RU1);
+    dialogWidgetLayout3->addWidget(RC2);
+    dialogWidgetLayout4->addWidget(RU2);
 
     RC1->setMinimumHeight(480);
     RU1->setMinimumHeight(500);
+    RC2->setMinimumHeight(480);
+    RU2->setMinimumHeight(500);
 
     m_dialog->setWindowLayout(dialogWidgetLayout);
     m_dialog2->setWindowLayout(dialogWidgetLayout2);
+    m_dialog3->setWindowLayout(dialogWidgetLayout3);
+    m_dialog4->setWindowLayout(dialogWidgetLayout4);
 
+
+    // CRUD 1
 
      connect(btn_add_c1,&QtMaterialIconButton::pressed,this,[=](){show_Creatpanel1();});
      connect(RC1->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_Creatpanel1();});
 
      connect(btn_update_c1,&QtMaterialIconButton::pressed,this,[=](){show_updatepanel1();});
      connect(RU1->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_updatepanel1();});
+
+     // CRUD 2
+     connect(btn_add_c2,&QtMaterialIconButton::pressed,this,[=](){show_Creatpanel2();});
+     connect(RC2->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_Creatpanel2();});
+
+     connect(btn_update_c2,&QtMaterialIconButton::pressed,this,[=](){show_updatepanel2();});
+     connect(RU2->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_updatepanel2();});
 
 
 }
@@ -135,6 +161,7 @@ void Ray::Card(QString color , QWidget * wd)
     wd->setLayout(widgetlayout);
 }
 
+/*********CREATE 1***********/
 void Ray::show_Creatpanel1()
 {
     m_dialog->show();
@@ -148,6 +175,8 @@ void Ray::hide_Creatpanel1()
     m_dialog->hide();
 }
 
+/**********UPDATE 1**********/
+
 void Ray::show_updatepanel1()
 {
     m_dialog2->show();
@@ -158,6 +187,34 @@ void Ray::hide_updatepanel1()
 {
     m_dialog2->hideDialog();
     m_dialog2->hide();
+}
+
+/*********CREATE 2***********/
+
+void Ray::show_Creatpanel2()
+{
+    m_dialog3->show();
+    m_dialog3->showDialog();
+    btn_update_c2->show();
+}
+
+void Ray::hide_Creatpanel2()
+{
+    m_dialog3->hideDialog();
+    m_dialog3->hide();
+}
+/**********UPDATE 2**********/
+
+void Ray::show_updatepanel2()
+{
+    m_dialog4->show();
+    m_dialog4->showDialog();
+}
+
+void Ray::hide_updatepanel2()
+{
+    m_dialog4->hideDialog();
+    m_dialog4->hide();
 }
 
 

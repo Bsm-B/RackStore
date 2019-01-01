@@ -31,6 +31,14 @@ public:
 
     void show_updatepanel1();
     void hide_updatepanel1();
+
+    void show_Creatpanel2();
+    void hide_Creatpanel2();
+
+    void show_updatepanel2();
+    void hide_updatepanel2();
+
+
 private slots:
 
 
@@ -39,6 +47,8 @@ private:
      QtMaterialAppBar       *notif_appbar;
      QtMaterialDialog       * m_dialog;
      QtMaterialDialog       * m_dialog2;
+     QtMaterialDialog       * m_dialog3;
+     QtMaterialDialog       * m_dialog4;
      QtMaterialIconButton *button;
      QtMaterialFloatingActionButton * btn_add_c2;
      QtMaterialFloatingActionButton * btn_update_c2;

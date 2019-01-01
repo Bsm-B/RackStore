@@ -14,11 +14,11 @@ Ray_update1::Ray_update1(QWidget *parent) :
     Nombre_Produit->setLabel("Nomber Produits");
     Flag->setCheckable(true);
 
-    ID->setFixedWidth(200);
-    ID_Produit->setFixedWidth(200);
-    Alert->setFixedWidth(200);
-    Price_Container->setFixedWidth(200);
-    Nombre_Produit->setFixedWidth(200);
+    ID->setFixedWidth(250);
+    ID_Produit->setFixedWidth(250);
+    Alert->setFixedWidth(250);
+    Price_Container->setFixedWidth(250);
+    Nombre_Produit->setFixedWidth(250);
 
     ok->setFixedWidth(100);
     cancel->setFixedWidth(80);

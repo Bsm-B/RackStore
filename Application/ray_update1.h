@@ -27,6 +27,7 @@ public:
     QtMaterialToggle * Flag = new QtMaterialToggle;
     QtMaterialFlatButton *  ok = new QtMaterialFlatButton("Save");
     QtMaterialFlatButton *  cancel = new  QtMaterialFlatButton("Cancel");
+
 private:
 
     Ui::Ray_update1 *ui;

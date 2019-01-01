@@ -3,8 +3,6 @@
 
 #include <QWidget>
 #include <qtmaterialtextfield.h>
-#include <qtmaterialautocomplete.h>
-#include <qtmaterialtoggle.h>
 #include <qtmaterialflatbutton.h>
 
 namespace Ui {

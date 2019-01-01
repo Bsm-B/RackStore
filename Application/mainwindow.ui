@@ -211,7 +211,7 @@
       <property name="geometry">
        <rect>
         <x>1330</x>
-        <y>15</y>
+        <y>20</y>
         <width>8</width>
         <height>620</height>
        </rect>
@@ -225,10 +225,9 @@ QScrollBar:horizontal {
 }
 
 QScrollBar:vertical {
-    
 	width: 10px;
 	margin: 0;
-	border-radius: 3px;
+	border-radius: 10px;
 }
 
 QScrollBar::handle:horizontal {
@@ -262,7 +261,10 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {	/* Hides the slid
        <number>1000</number>
       </property>
       <property name="singleStep">
-       <number>1</number>
+       <number>10</number>
+      </property>
+      <property name="pageStep">
+       <number>20</number>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
