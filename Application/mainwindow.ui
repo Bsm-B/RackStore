@@ -210,11 +210,50 @@
      <widget class="QScrollBar" name="verticalScrollBar">
       <property name="geometry">
        <rect>
-        <x>1320</x>
-        <y>10</y>
-        <width>20</width>
-        <height>621</height>
+        <x>1330</x>
+        <y>15</y>
+        <width>8</width>
+        <height>620</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* === QScrollBar:horizontal === */
+QScrollBar:horizontal {
+	background: white;				/* Background where slider is not */
+	height: 10px;
+	margin: 0;
+}
+
+QScrollBar:vertical {
+    
+	width: 10px;
+	margin: 0;
+	border-radius: 3px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #37474F;					/* Slider color */
+    min-width: 16px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #00BCD4;					/* Slider color */
+    min-height: 16px;
+	border-radius: 5px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;												/* Removes the dotted background */
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal,
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {	/* Hides the slider arrows */
+      border: none;
+      background: none;
+}
+</string>
       </property>
       <property name="minimum">
        <number>0</number>
