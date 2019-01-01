@@ -210,10 +210,10 @@
      <widget class="QScrollBar" name="verticalScrollBar">
       <property name="geometry">
        <rect>
-        <x>1330</x>
-        <y>20</y>
-        <width>8</width>
-        <height>620</height>
+        <x>1329</x>
+        <y>29</y>
+        <width>10</width>
+        <height>611</height>
        </rect>
       </property>
       <property name="styleSheet">

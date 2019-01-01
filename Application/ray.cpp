@@ -14,11 +14,11 @@ Ray::Ray(QWidget *parent) :
     m_dialog3(new QtMaterialDialog),
     m_dialog4(new QtMaterialDialog),
     button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "more_vert"))),
-    btn_add_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
-    btn_update_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
+    btn_add_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "add"))),
+    btn_update_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
     btn_delete_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "delete"))),
-    btn_add_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
-    btn_update_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
+    btn_add_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "add"))),
+    btn_update_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
     btn_delete_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "delete")))
 
 {
@@ -64,7 +64,9 @@ Ray::Ray(QWidget *parent) :
     ui->label_15->setStyleSheet(".QLabel { color : #9e9ebe }");
     ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
     ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
+    ui->label_19->setStyleSheet(".QLabel { color : #9e9ebe }");
     ui->label_21->setStyleSheet(".QLabel { color : #9e9ebe }");
+
       btn_add_c2->setMini(true);
       btn_update_c2->setMini(true);
       btn_delete_c2->setMini(true);
@@ -82,10 +84,10 @@ Ray::Ray(QWidget *parent) :
     ui->verticalLayout_7->addWidget(btn_delete_c1);
 
 
-    btn_update_c1->hide();
-    btn_update_c2->hide();
-    btn_delete_c1->hide();
-    btn_delete_c2->hide();
+  //  btn_update_c1->hide();
+   // btn_update_c2->hide();
+   // btn_delete_c1->hide();
+    //btn_delete_c2->hide();
 
     m_dialog->setParent(this);
     m_dialog2->setParent(this);
@@ -123,6 +125,11 @@ Ray::Ray(QWidget *parent) :
     m_dialog3->setWindowLayout(dialogWidgetLayout3);
     m_dialog4->setWindowLayout(dialogWidgetLayout4);
 
+    ui->label_3->setText(QString::number(t.Get_Sum()));
+    ui->label_4->setText(QString::number(t.Get_Count()));
+    ui->label_6->setText(QString::number(t.Get_Qtn()));
+  //  ui->label_8->setText();
+
 
     // CRUD 1
 
@@ -138,7 +145,6 @@ Ray::Ray(QWidget *parent) :
 
      connect(btn_update_c2,&QtMaterialIconButton::pressed,this,[=](){show_updatepanel2();});
      connect(RU2->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_updatepanel2();});
-
 
 }
 

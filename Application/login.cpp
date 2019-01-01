@@ -1,6 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
-
+#include <QDebug>
 
 Login::Login(QWidget *parent) :
     QMainWindow(parent),
@@ -10,10 +10,19 @@ Login::Login(QWidget *parent) :
     toogl()
 {
     ui->setupUi(this);
+
     setAttribute(Qt::WA_TranslucentBackground); //enable MainWindow to be transparent
 
     QGraphicsDropShadowEffect* effect1 = new QGraphicsDropShadowEffect();
     QGraphicsDropShadowEffect* effect2 = new QGraphicsDropShadowEffect();
+
+    if (RackDataBase.Open_db())
+    {
+        qDebug() << "Happy";
+    }else{
+        qDebug() << "sad";
+
+    }
 
     effect1->setBlurRadius(9);
     effect1->setColor(QColor(0, 0, 0, 150));

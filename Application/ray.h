@@ -11,7 +11,9 @@
 #include <qtmaterialiconbutton.h>
 #include <qtmaterialfab.h>
 #include <qtmaterialdialog.h>
-
+#include "item.h"
+#include "container.h"
+#include <QString>
 
 
 namespace Ui {
@@ -56,7 +58,8 @@ private:
      QtMaterialFloatingActionButton * btn_add_c1;
      QtMaterialFloatingActionButton * btn_update_c1;
      QtMaterialFloatingActionButton * btn_delete_c1;
-
+      Item t; // obj
+      Container C; //obj
 };
 
 #endif // RAY_H

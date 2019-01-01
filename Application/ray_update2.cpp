@@ -7,17 +7,18 @@ Ray_Update2::Ray_Update2(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ID->setLabel("ID");
+    ID->setLabel("ID  ");
     Code->setLabel("Code");
     Name->setLabel("Name");
     Price->setLabel("Price");
     Quantity->setLabel("Quantity");
 
-    ID->setFixedHeight(250);
+
     Code->setFixedWidth(250);
     Name->setFixedWidth(250);
     Price->setFixedWidth(250);
     Quantity->setFixedWidth(250);
+    ID->setFixedWidth(250);
 
     ok->setFixedWidth(100);
     cancel->setFixedWidth(80);
@@ -29,13 +30,11 @@ Ray_Update2::Ray_Update2(QWidget *parent) :
     ui->verticalLayout->addWidget(Price);
     ui->verticalLayout->addWidget(Quantity);
 
-
     ui->verticalLayout->setAlignment(ID,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Code,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Name,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Price,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Quantity,Qt::AlignCenter);
-
 
     ui->horizontalLayout_3->addWidget(cancel);
     ui->horizontalLayout_3->addWidget(ok);

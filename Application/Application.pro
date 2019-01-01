@@ -30,7 +30,10 @@ SOURCES += \
     ray_create1.cpp \
     ray_update1.cpp \
     ray_create2.cpp \
-    ray_update2.cpp
+    ray_update2.cpp \
+    database.cpp \
+    item.cpp \
+    container.cpp
 
 HEADERS += \
     login.h \
@@ -40,7 +43,10 @@ HEADERS += \
     ray_create1.h \
     ray_update1.h \
     ray_create2.h \
-    ray_update2.h
+    ray_update2.h \
+    database.h \
+    item.h \
+    container.h
 
 FORMS += \
     login.ui \

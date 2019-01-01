@@ -12,6 +12,7 @@
 #include <qtmaterialraisedbutton.h>
 #include <QGraphicsDropShadowEffect>
 #include "mainwindow.h"
+#include "database.h"
 
 namespace Ui {
 class Login;
@@ -33,6 +34,7 @@ public:
 
 private:
     Ui::Login *ui;
+    DataBase RackDataBase;
     QtMaterialIconButton * view;
     QtMaterialTextField * userpassword_textbox;
     bool toogl;
