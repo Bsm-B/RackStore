@@ -9,6 +9,9 @@
 #include <lib/qtmaterialtheme.h>
 #include <QLabel>
 #include <qtmaterialiconbutton.h>
+#include <qtmaterialfab.h>
+
+
 
 namespace Ui {
 class Ray;
@@ -29,6 +32,13 @@ private:
     Ui::Ray *ui;
      QtMaterialAppBar       *notif_appbar;
      QtMaterialIconButton *button;
+     QtMaterialFloatingActionButton * btn_add_c2;
+     QtMaterialFloatingActionButton * btn_update_c2;
+     QtMaterialFloatingActionButton * btn_delete_c2;
+     QtMaterialFloatingActionButton * btn_add_c1;
+     QtMaterialFloatingActionButton * btn_update_c1;
+     QtMaterialFloatingActionButton * btn_delete_c1;
+
 };
 
 #endif // RAY_H

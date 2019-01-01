@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView{
+    
+border-style: hidden;
+    
+    }</string>
+  </property>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
@@ -112,6 +119,21 @@
     </property>
     <property name="text">
      <string>Descriptions</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_11" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>701</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">.QWidget{
+border-style: hidden;
+    }</string>
     </property>
    </widget>
   </widget>
@@ -300,10 +322,10 @@
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>3</x>
+      <x>10</x>
       <y>48</y>
-      <width>525</width>
-      <height>231</height>
+      <width>512</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -312,11 +334,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTableView{
-    
-border-style: hidden;
-    
-    }</string>
+     <string notr="true"/>
     </property>
    </widget>
    <zorder>tableView</zorder>
@@ -367,6 +385,23 @@ border-style: hidden;
     </property>
     <property name="text">
      <string>Descriptions</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_12" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>431</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">.QWidget{
+    
+border-style: hidden;
+    
+    }</string>
     </property>
    </widget>
   </widget>
@@ -465,6 +500,64 @@ border-style: hidden;
      <string>CRUD 1</string>
     </property>
    </widget>
+   <widget class="QTableView" name="tableView_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>351</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_14" native="true">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>80</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+border-style: hidden;
+}</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_7"/>
+    </widget>
+   </widget>
   </widget>
   <widget class="QWidget" name="widget_10" native="true">
    <property name="geometry">
@@ -512,6 +605,64 @@ border-style: hidden;
     <property name="text">
      <string>CRUD 2</string>
     </property>
+   </widget>
+   <widget class="QTableView" name="tableView_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>831</width>
+      <height>251</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_13" native="true">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>81</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+border-style: hidden;
+}</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4"/>
+    </widget>
    </widget>
   </widget>
  </widget>

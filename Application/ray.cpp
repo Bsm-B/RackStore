@@ -5,7 +5,14 @@ Ray::Ray(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Ray),
     notif_appbar(new QtMaterialAppBar),
-    button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "more_vert")))
+    button (new QtMaterialIconButton(QtMaterialTheme::icon("navigation", "more_vert"))),
+    btn_add_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
+    btn_update_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
+    btn_delete_c2 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "delete"))),
+    btn_add_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("content", "create"))),
+    btn_update_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "update"))),
+    btn_delete_c1 (new QtMaterialFloatingActionButton(QtMaterialTheme::icon("action", "delete")))
+
 {
     ui->setupUi(this);
     Card("#1e88e5",ui->widget);
@@ -50,6 +57,24 @@ Ray::Ray(QWidget *parent) :
     ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
     ui->label_17->setStyleSheet(".QLabel { color : #9e9ebe }");
     ui->label_21->setStyleSheet(".QLabel { color : #9e9ebe }");
+      btn_add_c2->setMini(true);
+      btn_update_c2->setMini(true);
+      btn_delete_c2->setMini(true);
+
+      btn_add_c1->setMini(true);
+      btn_update_c1->setMini(true);
+      btn_delete_c1->setMini(true);
+
+    ui->verticalLayout_2->addWidget(btn_add_c2);
+    ui->verticalLayout_3->addWidget(btn_update_c2);
+    ui->verticalLayout_4->addWidget(btn_delete_c2);
+
+    ui->verticalLayout_5->addWidget(btn_add_c1);
+    ui->verticalLayout_6->addWidget(btn_update_c1);
+    ui->verticalLayout_7->addWidget(btn_delete_c1);
+
+
+
 
 
 }

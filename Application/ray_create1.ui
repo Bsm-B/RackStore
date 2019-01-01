@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ray_Create1</class>
+ <widget class="QWidget" name="Ray_Create1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>372</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>351</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>371</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>410</y>
+     <width>281</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>340</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3"/>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>350</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Flag</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
