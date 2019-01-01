@@ -13,7 +13,6 @@ Ray_Update2::Ray_Update2(QWidget *parent) :
     Price->setLabel("Price");
     Quantity->setLabel("Quantity");
 
-
     Code->setFixedWidth(250);
     Name->setFixedWidth(250);
     Price->setFixedWidth(250);
@@ -43,4 +42,9 @@ Ray_Update2::Ray_Update2(QWidget *parent) :
 Ray_Update2::~Ray_Update2()
 {
     delete ui;
+}
+
+QString Ray_Update2::GetDate()
+{
+       return ui->dateEdit_2->text();
 }

@@ -24,6 +24,8 @@ public:
 
     QtMaterialFlatButton *  ok = new QtMaterialFlatButton("Save");
     QtMaterialFlatButton *  cancel = new QtMaterialFlatButton("Cancel");
+    QString GetDate();
+
 private:
     Ui::Ray_Create2 *ui;
 };

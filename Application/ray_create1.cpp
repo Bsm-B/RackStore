@@ -29,9 +29,7 @@ Ray_Create1::Ray_Create1(QWidget *parent) :
     ui->verticalLayout->setAlignment(Alert,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Price_Container,Qt::AlignCenter);
     ui->verticalLayout->setAlignment(Nombre_Produit,Qt::AlignCenter);
-
     ui->verticalLayout_3->addWidget(Flag);
-
     ui->horizontalLayout_3->addWidget(cancel);
     ui->horizontalLayout_3->addWidget(ok);
 }

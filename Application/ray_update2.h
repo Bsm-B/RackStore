@@ -25,7 +25,7 @@ public:
     QtMaterialTextField * Quantity  = new QtMaterialTextField;
     QtMaterialFlatButton *  ok = new QtMaterialFlatButton("Save");
     QtMaterialFlatButton *  cancel = new QtMaterialFlatButton("Cancel");
-
+    QString GetDate();
 private:
     Ui::Ray_Update2 *ui;
 };

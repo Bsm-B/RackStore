@@ -77,7 +77,6 @@ QSqlQueryModel *Container::Display()
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Price Produits"));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("Nombre Produits"));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("Flag"));
-
         return model;
 
 }

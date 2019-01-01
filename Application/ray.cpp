@@ -1,9 +1,6 @@
 #include "ray.h"
 #include "ui_ray.h"
-#include "ray_create1.h"
-#include "ray_update1.h"
-#include "ray_create2.h"
-#include "ray_update2.h"
+
 
 Ray::Ray(QWidget *parent) :
     QWidget(parent),
@@ -105,10 +102,6 @@ Ray::Ray(QWidget *parent) :
     QVBoxLayout *dialogWidgetLayout3 = new QVBoxLayout;
     QVBoxLayout *dialogWidgetLayout4 = new QVBoxLayout;
 
-    Ray_Create1 *RC1 = new Ray_Create1;
-    Ray_update1 *RU1 = new Ray_update1;
-    Ray_Create2 *RC2 = new Ray_Create2;
-    Ray_Update2 *RU2 = new Ray_Update2;
 
     dialogWidgetLayout->addWidget(RC1);
     dialogWidgetLayout2->addWidget(RU1);
@@ -145,6 +138,14 @@ Ray::Ray(QWidget *parent) :
 
      connect(btn_update_c2,&QtMaterialIconButton::pressed,this,[=](){show_updatepanel2();});
      connect(RU2->cancel,&QtMaterialIconButton::pressed,this,[=](){hide_updatepanel2();});
+
+     connect(RC1->ok,&QtMaterialIconButton::pressed,this,[=](){add_container();});
+     connect(RU1->ok,&QtMaterialIconButton::pressed,this,[=](){update_container();});
+
+     connect(RC2->ok,&QtMaterialIconButton::pressed,this,[=](){add_item();});
+     connect(RU2->ok,&QtMaterialIconButton::pressed,this,[=](){update_item();});
+
+
 
 }
 
@@ -221,6 +222,90 @@ void Ray::hide_updatepanel2()
 {
     m_dialog4->hideDialog();
     m_dialog4->hide();
+}
+
+void Ray::add_container()
+{
+   int id = 0;
+   int id_prd =RC1->ID_Produit->text().toInt();
+   QString alert = RC1->Alert->text();
+   QString price_Container = RC1->Price_Container->text();
+   int nmbr_prod = RC1->Nombre_Produit->text().toInt();
+   int falg =  RC1->Flag->text().toInt();
+    Container C(id,id_prd,alert,price_Container,nmbr_prod,falg);
+    qDebug() << id << id_prd << alert << price_Container << nmbr_prod;
+
+    if(C.Add()){
+
+    }else{
+
+    }
+}
+
+void Ray::update_container()
+{
+    int id = RU1->ID->text().toInt();
+    int id_prd =RU1->ID_Produit->text().toInt();
+    QString alert = RU1->Alert->text();
+    QString price_Container = RU1->Price_Container->text();
+    int nmbr_prod = RU1->Nombre_Produit->text().toInt();
+    int falg =  RU1->Flag->text().toInt();
+    qDebug() << id << id_prd << alert << price_Container << nmbr_prod << nmbr_prod << falg;
+    qDebug() <<"test";
+     Container C(id,id_prd,alert,price_Container,nmbr_prod,falg);
+     if (C.Update()){
+
+     }else{
+
+     }
+}
+
+void Ray::delete_container()
+{
+
+}
+
+void Ray::add_item()
+{
+    int id = 0;
+    QString code  =  RC2->Code->text();
+    QString name = RC2->Name->text();
+    float prc = RC2->Price->text().toFloat();
+    int qnt = RC2->Quantity->text().toInt();
+    QString date = RC2->GetDate();
+
+    qDebug() << code << name << prc << qnt << date;
+
+    Item T(id,code,name,prc,qnt,date);
+    if( T.Add())
+    {
+
+    }else{
+
+    }
+}
+
+void Ray::update_item()
+{
+    int id = RU2->ID->text().toInt();
+    QString code  =  RU2->Code->text();
+    QString name = RU2->Name->text();
+    float prc = RU2->Price->text().toFloat();
+    int qnt = RU2->Quantity->text().toInt();
+    QString date = RU2->GetDate();
+    qDebug() << id << code << name << prc << date;
+    Item T(id,code,name,prc,qnt,date);
+    if( T.Update())
+    {
+
+    }else{
+
+    }
+}
+
+void Ray::delete_item()
+{
+
 }
 
 

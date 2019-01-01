@@ -30,7 +30,6 @@ Ray_Create2::Ray_Create2(QWidget *parent) :
     ui->verticalLayout_2->setAlignment(Price,Qt::AlignCenter);
     ui->verticalLayout_2->setAlignment(Quantity,Qt::AlignCenter);
 
-
     ui->horizontalLayout_5->addWidget(cancel);
     ui->horizontalLayout_5->addWidget(ok);
 }
@@ -38,4 +37,9 @@ Ray_Create2::Ray_Create2(QWidget *parent) :
 Ray_Create2::~Ray_Create2()
 {
     delete ui;
+}
+
+QString Ray_Create2::GetDate()
+{
+    return ui->dateEdit->text();
 }

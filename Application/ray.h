@@ -14,7 +14,10 @@
 #include "item.h"
 #include "container.h"
 #include <QString>
-
+#include "ray_create1.h"
+#include "ray_update1.h"
+#include "ray_create2.h"
+#include "ray_update2.h"
 
 namespace Ui {
 class Ray;
@@ -40,6 +43,13 @@ public:
     void show_updatepanel2();
     void hide_updatepanel2();
 
+    void add_container();
+    void update_container();
+    void delete_container();
+
+    void add_item();
+    void update_item();
+    void delete_item();
 
 private slots:
 
@@ -60,6 +70,12 @@ private:
      QtMaterialFloatingActionButton * btn_delete_c1;
       Item t; // obj
       Container C; //obj
+
+      Ray_Create1 *RC1 = new Ray_Create1;
+      Ray_update1 *RU1 = new Ray_update1;
+      Ray_Create2 *RC2 = new Ray_Create2;
+      Ray_Update2 *RU2 = new Ray_Update2;
+
 };
 
 #endif // RAY_H
